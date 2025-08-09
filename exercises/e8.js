@@ -6,6 +6,20 @@
 
 export function getClientWithGreatestBalance(array) {
   // Your code goes here...
+  let val = -Infinity;
+  let richest;
+  let arr = [];
+
+  for(let i = 0; i < array.length; i ++){
+    if(array[i].balance > val){
+      val = array[i].balance;
+      richest = array[i];
+    }
+  }
+
+  arr.push(richest);
+
+  return arr;
 
 }
 

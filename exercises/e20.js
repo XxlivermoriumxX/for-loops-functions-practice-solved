@@ -7,7 +7,34 @@
 
 export function separateNamesWithAFromRest(array) {
   // Your code goes here...
+  let does = [];
+  let doesNot = [];
+  let namesArr = [];
 
+  for(let i = 0; i < array.length; i++){
+    let name = array[i];
+    let contains = false;
+
+    //checking if the name has 'a'
+    for(let j = 0; j < name.length; j++){
+      if(name.at(j) === 'a'){
+        contains = true;
+      }
+    }
+
+    //putting the name in the appropriate container
+    if(contains){
+      does.push(name);
+    }
+    else{
+      doesNot.push(name);
+    }
+  }
+
+  namesArr.push(does);
+  namesArr.push(doesNot);
+
+  return namesArr;
 }
 
 
